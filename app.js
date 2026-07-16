@@ -108,12 +108,16 @@ if (typeof document !== "undefined") {
 
   function setupIntro() {
     const intro = byId("intro");
+    let closed = false;
     const close = () => {
+      if (closed) return;
+      closed = true;
       intro.classList.add("is-gone");
       window.setTimeout(() => intro.remove(), reduceMotion ? 0 : 850);
     };
     byId("start").addEventListener("click", close);
     intro.addEventListener("keydown", (event) => { if (event.key === "Escape") close(); });
+    window.setTimeout(close, 3200);
   }
 
   function setupPointerGlow() {
