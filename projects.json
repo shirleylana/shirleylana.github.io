@@ -2,84 +2,75 @@
   "profile": {
     "login": "shirleylana",
     "name": "ShirleyLana",
-    "bio": "公开项目与实践记录",
+    "bio": "保持无尽好奇心的 AI 产品经理",
     "avatar_url": "https://avatars.githubusercontent.com/u/274502250?v=4",
     "html_url": "https://github.com/shirleylana"
   },
   "site": {
-    "title": "ShirleyLana 的项目笔记本",
+    "title": "Idea Lab · ShirleyLana",
     "language": "zh-CN",
-    "theme_color": "#7a4f3a",
-    "categories": [
-      "生活场景",
-      "工作提效",
-      "玄学命理",
-      "金融炒股"
-    ]
+    "theme_color": "#d5ff55",
+    "categories": ["生活场景", "工作提效", "玄学命理", "金融炒股"]
   },
   "projects": [
     {
       "repo": "shirleylana/JobHunter-Agent",
       "url": "https://github.com/shirleylana/JobHunter-Agent",
       "visibility": "public",
-      "fingerprint": "586c364807ced98f13161f5bc718f80eb143057b0a7cdfc6c2939d99cf24aee1",
-      "generated": {
-        "name": "JobHunter Agent",
-        "value": "用多工具 AI Agent 自动处理求职中耗时的岗位追踪、匹配分析与简历优化。",
-        "production_value": "把岗位收集、匹配判断、简历优化与经历管理串进同一工作流，减少重复检索和信息搬运。",
-        "category": "工作提效",
-        "technologies": [
-          "Python",
-          "LLM Agent",
-          "Notion"
-        ]
-      },
+      "visual": "agent",
       "approved": {
         "name": "JobHunter Agent",
         "value": "用多工具 AI Agent 自动处理求职中耗时的岗位追踪、匹配分析与简历优化。",
         "production_value": "把岗位收集、匹配判断、简历优化与经历管理串进同一工作流，减少重复检索和信息搬运。",
         "category": "工作提效",
-        "technologies": [
-          "Python",
-          "LLM Agent",
-          "Notion"
-        ]
+        "technologies": ["AI Agent", "Python", "Notion"]
       },
-      "evidence": [
-        "README：提供岗位自动抓取、求职决策辅助、简历个性化优化和实习经历管理。",
-        "README：支持定时抓取岗位并同步至 Notion。"
-      ],
+      "evidence": ["README：提供岗位抓取、求职决策、简历优化和经历管理。", "README：支持定时抓取并同步至 Notion。"],
       "confidence": "high"
     },
     {
       "repo": "shirleylana/ai-pm-resume-prompt",
       "url": "https://github.com/shirleylana/ai-pm-resume-prompt",
       "visibility": "public",
-      "fingerprint": "ac172a820b2d2a0dfff11ebf4b2b3518ad8934202ae8c9b57f559867f1c83b08",
-      "generated": {
-        "name": "AI 产品经理简历优化提示词",
-        "value": "用结构化提示词把零散项目事实整理为强调业务问题、产品动作和真实结果的产品经理简历表达。",
-        "production_value": "降低反复组织项目描述的门槛，并提前暴露缺失指标和容易被面试追问的薄弱点。",
-        "category": "工作提效",
-        "technologies": [
-          "Prompt Engineering",
-          "AI Product"
-        ]
-      },
+      "visual": "resume",
       "approved": {
-        "name": "AI 产品经理简历优化提示词",
-        "value": "用结构化提示词把零散项目事实整理为强调业务问题、产品动作和真实结果的产品经理简历表达。",
-        "production_value": "降低反复组织项目描述的门槛，并提前暴露缺失指标和容易被面试追问的薄弱点。",
+        "name": "AI PM Resume Prompt",
+        "value": "把零散项目事实整理为强调业务问题、产品动作和真实结果的 AI 产品经理简历表达。",
+        "production_value": "降低反复组织项目描述的成本，并提前暴露缺失指标和容易被面试追问的薄弱点。",
         "category": "工作提效",
-        "technologies": [
-          "Prompt Engineering",
-          "AI Product"
-        ]
+        "technologies": ["Prompt", "AI Product"]
       },
-      "evidence": [
-        "README：模板覆盖业务背景、问题拆解、关键动作、真实结果与对抗性审查。",
-        "README：明确要求不夸大事实，缺少数据时提示补充指标。"
-      ],
+      "evidence": ["README：覆盖业务背景、问题拆解、关键动作、真实结果与对抗性审查。"],
+      "confidence": "high"
+    },
+    {
+      "repo": "shirleylana/5min-voice-diary-prompt",
+      "url": "https://github.com/shirleylana/5min-voice-diary-prompt",
+      "visibility": "public",
+      "visual": "diary",
+      "approved": {
+        "name": "5min Voice Diary",
+        "value": "用分段语音和轻度 AI 整理，把写日记变成每天五分钟就能启动的生活习惯。",
+        "production_value": "把记录门槛降到只需开口说，并保留本人语气；已从忙时中断变为连续 35 天记录。",
+        "category": "生活场景",
+        "technologies": ["Prompt", "Voice", "Yuanbao"]
+      },
+      "evidence": ["README：作者从忙时不记日记转为连续 35 天记录。", "README：只做轻度整理，明确结束后才生成完整日记。"],
+      "confidence": "high"
+    },
+    {
+      "repo": "shirleylana/github-idea-showcase",
+      "url": "https://github.com/shirleylana/github-idea-showcase",
+      "visibility": "public",
+      "visual": "showcase",
+      "approved": {
+        "name": "GitHub Idea Showcase",
+        "value": "把公开 GitHub 项目自动整理成可分类的卡片式作品集，用一个链接讲清创意、实践与价值。",
+        "production_value": "无需额外后端即可低成本生成并长期维护，面试现场能更快集中展示丰富的 idea 和落地能力。",
+        "category": "工作提效",
+        "technologies": ["Codex Skill", "GitHub Pages"]
+      },
+      "evidence": ["README：读取公开仓库，生成分类、价值文案与静态站点。", "README：通过 GitHub Pages 发布且保留人工确认文案。"],
       "confidence": "high"
     }
   ]

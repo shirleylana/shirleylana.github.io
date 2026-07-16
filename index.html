@@ -1,34 +1,70 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A curated collection of GitHub projects">
-    <title>Projects</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <main class="page-shell">
-      <header class="profile" aria-labelledby="profile-name">
-        <img id="profile-avatar" class="profile__avatar" alt="" hidden>
-        <div>
-          <p class="eyebrow">PROJECT NOTEBOOK</p>
-          <h1 id="profile-name">Projects</h1>
-          <p id="profile-bio" class="profile__bio"></p>
-          <a id="profile-link" class="profile__link" href="#">View GitHub profile <span aria-hidden="true">↗</span></a>
-        </div>
-      </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="ShirleyLana 的 AI 产品实验、工作流与真实实践。">
+  <title>Idea Lab · ShirleyLana</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
 
-      <section class="notebook" aria-labelledby="projects-heading">
-        <h2 id="projects-heading" class="visually-hidden">Projects</h2>
-        <nav id="category-tabs" class="tabs" role="tablist" aria-label="Project categories"></nav>
-        <div class="notebook__paper">
-          <p id="project-count" class="project-count" aria-live="polite"></p>
-          <div id="project-grid" class="project-grid"></div>
-          <p id="empty-state" class="empty-state" hidden>No projects in this category.</p>
-        </div>
-      </section>
-    </main>
-    <script src="app.js" defer></script>
-  </body>
+  <section class="intro" id="intro" aria-label="开场动画">
+    <div class="aurora" aria-hidden="true"></div>
+    <div class="prism">
+      <div class="intro-copy">
+        <p class="eyebrow">ShirleyLana presents</p>
+        <h1>IDEA<br>LAB</h1>
+        <button class="start" id="start" type="button">Press start <span>↗</span></button>
+      </div>
+    </div>
+  </section>
+
+  <nav class="nav" aria-label="主导航">
+    <a class="brand" href="#top">SL / IDEA LAB</a>
+    <div class="nav-links">
+      <a class="active" href="#work">PROJECTS</a>
+      <a href="#about">ABOUT</a>
+      <a id="github-link" href="https://github.com/shirleylana" target="_blank" rel="noreferrer">GITHUB ↗</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-orb" aria-hidden="true"></div>
+    <div class="micro"><span>AI PRODUCT BUILDER</span><span>CURIOSITY IN PROGRESS · 2026</span></div>
+    <h1 class="headline"><span>IDEAS</span><span class="outline">BECOME</span><span class="gradient">REAL.</span></h1>
+    <div class="hero-bottom">
+      <p>把好奇心变成可以运行的产品。这里收集我的 AI 实验、工作流和真实实践，也记录每个项目创造了什么价值。</p>
+      <a class="scroll" href="#work">Scroll to explore</a>
+    </div>
+  </header>
+
+  <div class="marquee" aria-hidden="true"><div>AI PRODUCT · PROMPT ENGINEERING · AGENT WORKFLOW · REAL IMPACT · LIFE HACKS · AI PRODUCT · PROMPT ENGINEERING · AGENT WORKFLOW · REAL IMPACT · LIFE HACKS ·&nbsp;</div></div>
+
+  <main class="work" id="work">
+    <div class="section-head">
+      <h2>SELECTED<br>EXPERIMENTS</h2>
+      <p>不是代码仓库的清单，而是一组关于“如何把想法落地”的案例。每张卡片都回答：它解决什么，以及为什么值得投入使用。</p>
+    </div>
+    <div class="filter-row">
+      <div class="filters" id="category-filters" role="tablist" aria-label="项目分类"></div>
+      <p class="project-count" id="project-count" aria-live="polite"></p>
+    </div>
+    <div class="grid" id="project-grid"></div>
+    <p class="empty-state" id="empty-state" hidden>这个分类的实验还在酝酿中。</p>
+  </main>
+
+  <section class="about" id="about">
+    <p class="about-label">// ABOUT SHIRLEY</p>
+    <div>
+      <blockquote id="about-copy">我是一名保持无尽好奇心的 AI 产品经理。喜欢用低成本方式改造生活与工作流程，把观察变成实验，把想法变成可以运行的产品；持续搭建、验证，也在每一次实践中不断进化。</blockquote>
+      <a class="about-link" href="https://github.com/shirleylana" target="_blank" rel="noreferrer">Follow the experiments on GitHub ↗</a>
+    </div>
+  </section>
+
+  <footer class="footer"><span>© 2026 SHIRLEYLANA</span><span>BUILT FROM PUBLIC GITHUB EVIDENCE</span></footer>
+</body>
 </html>
