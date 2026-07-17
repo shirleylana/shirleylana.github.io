@@ -163,6 +163,7 @@ if (typeof document !== "undefined") {
     })
     .then((data) => {
       state.data = data;
+      window.__enhancedFiltersReady = true;
       document.title = data.site.title || document.title;
       byId("github-link").href = data.profile.html_url;
       renderFilters();

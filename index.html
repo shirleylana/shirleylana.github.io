@@ -94,5 +94,24 @@
   </section>
 
   <footer class="footer"><span>© 2026 SHIRLEYLANA</span><span>BUILT FROM PUBLIC GITHUB EVIDENCE</span></footer>
+  <script id="fallback-filter-script">
+    document.getElementById("category-filters").addEventListener("click", function (event) {
+      if (window.__enhancedFiltersReady) return;
+      const button = event.target.closest("button[data-category]");
+      if (!button) return;
+      const category = button.dataset.category;
+      const cards = [...document.querySelectorAll("#project-grid .card")];
+      const visible = cards.filter(card => category === "全部" || card.dataset.category === category);
+      cards.forEach(card => { card.hidden = !visible.includes(card); });
+      this.querySelectorAll("button[data-category]").forEach(tab => {
+        const selected = tab === button;
+        tab.classList.toggle("active", selected);
+        tab.setAttribute("aria-selected", String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+      });
+      document.getElementById("project-count").textContent = `${visible.length} / ${cards.length} PROJECTS`;
+      document.getElementById("empty-state").hidden = visible.length !== 0;
+    });
+  </script>
 </body>
 </html>
