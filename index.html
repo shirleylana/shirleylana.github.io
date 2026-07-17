@@ -50,7 +50,13 @@
       <p>想法变成真实产品的过程记录，每张卡片展示了，它解决什么，以及为什么值得投入使用。</p>
     </div>
     <div class="filter-row">
-      <div class="filters" id="category-filters" role="tablist" aria-label="项目分类"></div>
+      <div class="filters" id="category-filters" role="tablist" aria-label="项目分类">
+        <button class="filter active" type="button" role="tab" data-category="全部" aria-selected="true" tabindex="0">全部</button>
+        <button class="filter" type="button" role="tab" data-category="生活场景" aria-selected="false" tabindex="-1">生活场景</button>
+        <button class="filter" type="button" role="tab" data-category="工作提效" aria-selected="false" tabindex="-1">工作提效</button>
+        <button class="filter" type="button" role="tab" data-category="玄学命理" aria-selected="false" tabindex="-1">玄学命理</button>
+        <button class="filter" type="button" role="tab" data-category="金融炒股" aria-selected="false" tabindex="-1">金融炒股</button>
+      </div>
       <p class="project-count" id="project-count" aria-live="polite">4 / 4 PROJECTS</p>
     </div>
     <div class="grid" id="project-grid">

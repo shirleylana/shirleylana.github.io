@@ -106,6 +106,30 @@ if (typeof document !== "undefined") {
     renderProjects(true);
   }
 
+  function fallbackSelectCategory(category) {
+    const cards = [...byId("project-grid").querySelectorAll(".card")];
+    const visible = cards.filter((card) => category === "全部" || card.dataset.category === category);
+    cards.forEach((card) => { card.hidden = !visible.includes(card); });
+    [...byId("category-filters").querySelectorAll('[role="tab"]')].forEach((button) => {
+      const selected = button.dataset.category === category;
+      button.classList.toggle("active", selected);
+      button.setAttribute("aria-selected", String(selected));
+      button.tabIndex = selected ? 0 : -1;
+    });
+    byId("project-count").textContent = `${visible.length} / ${cards.length} PROJECTS`;
+    byId("empty-state").hidden = visible.length !== 0;
+  }
+
+  function setupFallbackFilters() {
+    [...byId("category-filters").querySelectorAll('[role="tab"]')].forEach((button) => {
+      button.addEventListener("click", () => {
+        if (state.data) selectCategory(button.dataset.category);
+        else fallbackSelectCategory(button.dataset.category);
+      });
+      button.addEventListener("keydown", moveFilterFocus);
+    });
+  }
+
   function setupIntro() {
     const intro = byId("intro");
     let closed = false;
@@ -128,6 +152,10 @@ if (typeof document !== "undefined") {
     }, { passive: true });
   }
 
+  setupFallbackFilters();
+  setupIntro();
+  setupPointerGlow();
+
   fetch("projects.json")
     .then((response) => {
       if (!response.ok) throw new Error(`Could not load projects.json (${response.status})`);
@@ -139,12 +167,12 @@ if (typeof document !== "undefined") {
       byId("github-link").href = data.profile.html_url;
       renderFilters();
       renderProjects(false);
-      setupIntro();
-      setupPointerGlow();
     })
     .catch((error) => {
-      byId("empty-state").hidden = false;
-      byId("empty-state").textContent = error.message;
-      byId("intro").remove();
+      const fallbackCards = byId("project-grid").querySelectorAll(".card").length;
+      if (!fallbackCards) {
+        byId("empty-state").hidden = false;
+        byId("empty-state").textContent = error.message;
+      }
     });
 }
