@@ -10,7 +10,7 @@
     "title": "Shirley's Idea · GitHub Projects",
     "language": "zh-CN",
     "theme_color": "#d5ff55",
-    "categories": ["生活场景", "工作提效", "玄学命理", "金融炒股"]
+    "categories": ["生活场景", "工作提效", "兴趣爱好", "金融炒股"]
   },
   "projects": [
     {
@@ -71,6 +71,21 @@
         "technologies": ["Codex Skill", "GitHub Pages"]
       },
       "evidence": ["README：读取公开仓库，生成分类、价值文案与静态站点。", "README：通过 GitHub Pages 发布且保留人工确认文案。"],
+      "confidence": "high"
+    },
+    {
+      "repo": "shirleylana/cinematic-americana-design-skill",
+      "url": "https://github.com/shirleylana/cinematic-americana-design-skill",
+      "visibility": "public",
+      "visual": "cinematic",
+      "approved": {
+        "name": "Cinematic Americana Design Skill",
+        "value": "把电影感美式复古、旧好莱坞与加州公路等氛围，转化为可复用、可调节的跨媒介视觉设计系统。",
+        "production_value": "用五套时期风格、三档氛围浓度和多媒介配方，把模糊审美偏好变成可反复调用的设计决策，同时用原创性护栏降低直接模仿风险。",
+        "category": "兴趣爱好",
+        "technologies": ["Codex Skill", "Visual Design", "Cross-medium"]
+      },
+      "evidence": ["README：提供五套时期风格、三档相似度和壁纸、海报、响应式网站配方。", "README：包含针对肖像、歌词、标志、官方作品与封面构图的原创性护栏。"],
       "confidence": "high"
     }
   ]
